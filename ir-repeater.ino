@@ -1,7 +1,7 @@
 /*
-  Test Sketch
+  IR Repeater (ir-repeater.ino)
 
-  Sketch to test code and try new things!
+  I forked this sketch and made a small edit to get it to compile (row 79)
 
   created 18 December 2019 in Maassluis, The Netherlands
   by A.M. Heijboer
