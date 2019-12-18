@@ -15,6 +15,10 @@
 */
 
 
+// MOVED TO PRIVATE GIT REPOSITORY!! This sketch was created as a quick test and has since been moved to a private Git Repository.
+
+
+
 #include <IRremote.h>
 
 // create variables for IR send/recieve PINs
