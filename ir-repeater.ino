@@ -1,7 +1,7 @@
 /*
-  IR Repeater (IR_Repeater.ino)
+  Test Sketch
 
-  Sketch to repeat IR signals (make a IR repeater with a Arduino + IR reciever + IR sender)
+  Sketch to test code and try new things!
 
   created 18 December 2019 in Maassluis, The Netherlands
   by A.M. Heijboer
@@ -17,39 +17,13 @@
 
 #include <IRremote.h>
 
-// create variables for IR send/recieve PINs
-// TestSetup01 - IR Receiver start PIN is 11 (~13) | IR Sender start PIN is 5 (~3)
-  // send
-  //int irSendData = 3; // DO NOT CHANGE! See 'IRsend irsend' other PIN than default 3 possibly not allowed
-  int irSendVCC = 4;
-  int irSendGround = 5;
-  // recieve
-  int irRecvData = 11;
-  int irRecvVCC = 13;
-  int irRecvGround = 12;
-
-IRrecv irrecv(irRecvData);
-//IRsend irsend(irSendData); // Defaults to pin 3 // Dous not work on other PIN? Other PIN not supported by library as it seems
+int RECV_PIN = 4;
+IRrecv irrecv(RECV_PIN);
 IRsend irsend; // Defaults to pin 3
-
 decode_results results;
 unsigned int rawCodes[RAWBUF];
 
 void setup(){
-  // set VCC and ground PINs for IR sender and IR transceiver
-    // declare PINs as output
-    pinMode(irSendVCC, OUTPUT);     // send VCC
-    pinMode(irSendGround, OUTPUT);  // send Ground
-    pinMode(irRecvVCC, OUTPUT);     // recv VCC
-    pinMode(irRecvGround, OUTPUT);  // recv Ground
-    // give power to PINs
-    digitalWrite(irSendVCC, HIGH);  // connect to VCC 5 volt
-    digitalWrite(irRecvVCC, HIGH);  // connect to VCC 5 volt
-    // give ground to PINs
-    digitalWrite(irSendGround, LOW); // connect to Ground
-    digitalWrite(irRecvGround, LOW); // connect to Ground
-
-  // below the original setup (above I added myself)
   Serial.begin(9600);
   irrecv.enableIRIn();
   Serial.println("Info    : Infrared Decoder and Extender");
