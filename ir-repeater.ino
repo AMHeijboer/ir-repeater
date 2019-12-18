@@ -1,3 +1,20 @@
+/*
+  Test Sketch
+
+  Sketch to test code and try new things!
+
+  created 18 December 2019 in Maassluis, The Netherlands
+  by A.M. Heijboer
+  modified 18 December 2019
+    
+  This code is property of A.M. Heijboer. © A.M. Heijboer.
+
+  Github: https://github.com/AMHeijboer/ir-repeater (project is forked!!)
+
+  Note: the creation date is the date this project was forked on GitHub
+*/
+
+
 #include <IRremote.h>
 
 int RECV_PIN = 4;
